@@ -1,0 +1,10 @@
+.husky
+.swc
+.next
+.vercel
+build
+dist
+node_modules
+package-lock.json
+TODO.md
+yarn.lock

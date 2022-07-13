@@ -1,0 +1,20 @@
+@use "../../styles/animations.scss" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/theme.scss" as *;
+@use "../../styles/utils.scss" as *;
+
+.layout {
+  align-items: center;
+  animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+
+  .title {
+    color: $neutral-color;
+  }
+}
+
+@include gradient;

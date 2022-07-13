@@ -1,0 +1,62 @@
+{
+  "name": "area-do-aluno-redesign",
+  "description": "<YOUR_PROJECT_DESCRIPTION>",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "homepage": "<YOUR_PROJECT_URL>",
+  "main": "src/pages/_app.tsx",
+  "author": {
+    "name": "Rian Oliveira",
+    "email": "<YOUR_EMAIL>"
+  },
+  "scripts": {
+    "build": "next build",
+    "commit": "cz",
+    "commitlint": "commitlint --edit",
+    "dev": "next dev",
+    "eslint": "next lint",
+    "format": "prettier --write --ignore-unknown .",
+    "lint": "npm run format & npm run stylelint & npm run eslint",
+    "prebuild": "npm run lint",
+    "prepare": "husky install",
+    "start": "next start",
+    "stylelint": "stylelint **/*.scss"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.0.0",
+    "axios": "^0.27.2",
+    "next": "12.2.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/node": "^18.0.3",
+    "@types/react-dom": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.18.0",
+    "husky": "^8.0.1",
+    "postcss-scss": "^4.0.4",
+    "prettier": "^2.7.1",
+    "prisma": "^4.0.0",
+    "sass": "^1.53.0",
+    "stylelint": "^14.9.1",
+    "typescript": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "<YOUR_REPOSITORY_URL>"
+  },
+  "keywords": [],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
