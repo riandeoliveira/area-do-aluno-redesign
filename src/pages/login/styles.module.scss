@@ -68,16 +68,18 @@
 .button {
   background-color: $primary-color;
   border: $primary-color;
+  color: #ffffff;
   font-weight: bold;
   transition: 0.15s background-color 0.15s box-shadow;
 
-  &:hover {
+  &:focus {
     background-color: $primary-dark-color;
+    box-shadow: 0 0 0 0.25rem #ffffff;
   }
 
-  &:focus {
-    background-color: $primary-color;
-    box-shadow: 0 0 0 0.1rem;
+  &:hover {
+    background-color: $primary-dark-color;
+    color: #ffffff;
   }
 }
 
@@ -95,15 +97,15 @@
   text-decoration: none;
   transition: 0.15s color;
 
-  &:hover {
-    color: $primary-color;
-    text-decoration: underline;
-  }
-
-  &:focus {
+  &:focus-visible {
     border-radius: 0.25rem;
     box-shadow: 0 0 0 0.25rem $primary-color;
     outline: 0;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $primary-color;
     text-decoration: underline;
   }
 }

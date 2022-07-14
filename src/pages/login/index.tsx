@@ -25,18 +25,22 @@ const Login: NextPage = (): JSX.Element => {
                   type="number"
                   className={styles.input}
                   placeholder="Seu RGM"
-                  maxLength={8}
-                  max={8}
+                  required
                 />
                 <Form.Control
                   type="password"
                   className={styles.input}
                   placeholder="Sua senha"
+                  required
                 />
               </div>
               <div className={styles.button_container}>
-                <Button className={styles.button}>Blackboard</Button>
-                <Button className={styles.button}>Área do Aluno</Button>
+                <Button variant="" type="submit" className={styles.button}>
+                  Blackboard
+                </Button>
+                <Button variant="" type="submit" className={styles.button}>
+                  Área do Aluno
+                </Button>
               </div>
               <div className={styles.links_container}>
                 <a href="#" className={styles.link}>
