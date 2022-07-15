@@ -13,7 +13,7 @@ const Login: NextPage = (): JSX.Element => {
           <div className={styles.container}>
             <header className={styles.header}>
               <Image
-                src="/assets/icons/logo.svg"
+                src="/assets/icons/cruzeiro-do-sul-logo.svg"
                 alt="Estrela opaca com contorno amarelo do lado esquerdo do título: Universidade Cruzeiro do Sul"
                 width={470}
                 height={100}
