@@ -3,16 +3,6 @@
 @use "../../styles/theme.scss" as *;
 @use "../../styles/utils.scss" as *;
 
-.item {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.1s;
-
-  &:hover {
-    background-color: #e84e0e;
-  }
-}
-
 .icon {
   color: #ffffff;
 }
@@ -22,10 +12,17 @@
   color: #ffffff;
   display: flex;
   gap: 1rem;
+  padding: 0.5rem 1.5rem;
   text-decoration: none;
+  transition: background-color 0.1s;
   width: 100%;
 
+  &:focus {
+    background-color: #e84e0e;
+  }
+
   &:hover {
+    background-color: #e84e0e;
     color: #ffffff;
   }
 }

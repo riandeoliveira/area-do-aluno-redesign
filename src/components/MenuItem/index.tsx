@@ -9,7 +9,7 @@ const MenuItem = ({ path, icon, title }: MenuItemProps): JSX.Element => {
   const router = useRouter();
 
   return (
-    <li className={styles.item}>
+    <li>
       <Link href={router.pathname + path}>
         <a className={styles.link}>
           <div className={styles.icon}>{icon}</div>
