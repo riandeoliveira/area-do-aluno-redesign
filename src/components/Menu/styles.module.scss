@@ -1,0 +1,46 @@
+@use "../../styles/animations.scss" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/theme.scss" as *;
+@use "../../styles/utils.scss" as *;
+
+.menu {
+  background-color: #1f2933;
+  top: 5rem;
+  width: 300px;
+}
+
+.aside {
+  display: flex;
+  height: 100%;
+}
+
+.left_bar {
+  animation: gradient 2s ease infinite;
+  background: linear-gradient(180deg, #e84e0e 50%, #1f2933 60%);
+  background-size: 400% 400%;
+  height: 100vh;
+  width: 0.5rem;
+}
+
+.nav {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
