@@ -6,13 +6,18 @@ import { Offcanvas } from "react-bootstrap";
 import styles from "./styles.module.scss";
 
 const Menu = (): JSX.Element => {
-  const { menuIsOpen, handleMenuState } = useContext(MenuContext);
+  const { menuIsOpen, toggleMenuShow } = useContext(MenuContext);
+
+  const props = {
+    backdrop: false,
+  };
 
   return (
     <Offcanvas
       show={menuIsOpen}
-      onHide={handleMenuState}
+      onHide={toggleMenuShow}
       className={styles.menu}
+      {...props}
     >
       <aside className={styles.aside}>
         <div className={styles.left_bar}></div>

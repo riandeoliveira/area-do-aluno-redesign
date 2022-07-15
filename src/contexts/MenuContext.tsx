@@ -3,7 +3,7 @@ import { createContext, useState, type ReactNode } from "react";
 interface IMenuContext {
   menuIsOpen: boolean;
 
-  handleMenuState: () => void;
+  toggleMenuShow: () => void;
 }
 
 interface MenuProviderProps {
@@ -13,7 +13,7 @@ interface MenuProviderProps {
 const initialValue: IMenuContext = {
   menuIsOpen: false,
 
-  handleMenuState: () => {},
+  toggleMenuShow: () => {},
 };
 
 export const MenuContext = createContext<IMenuContext>(initialValue);
@@ -21,12 +21,10 @@ export const MenuContext = createContext<IMenuContext>(initialValue);
 export const MenuProviver = ({ children }: MenuProviderProps): JSX.Element => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
 
-  const handleMenuState = (): void => {
-    menuIsOpen ? setMenuIsOpen(false) : setMenuIsOpen(true);
-  };
+  const toggleMenuShow = (): void => setMenuIsOpen((state: boolean) => !state);
 
   return (
-    <MenuContext.Provider value={{ menuIsOpen, handleMenuState }}>
+    <MenuContext.Provider value={{ menuIsOpen, toggleMenuShow }}>
       {children}
     </MenuContext.Provider>
   );

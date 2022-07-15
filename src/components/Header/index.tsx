@@ -6,7 +6,7 @@ import { HiMenu } from "react-icons/hi";
 import styles from "./styles.module.scss";
 
 const Header = (): JSX.Element => {
-  const { handleMenuState, menuIsOpen } = useContext(MenuContext);
+  const { toggleMenuShow, menuIsOpen } = useContext(MenuContext);
 
   return (
     <header className={styles.header}>
@@ -21,7 +21,7 @@ const Header = (): JSX.Element => {
           type="button"
           title="Abrir menu de navegação"
           className={styles.menu_button}
-          onClick={handleMenuState}
+          onClick={toggleMenuShow}
         >
           {menuIsOpen ? (
             <CgClose size={40} className={styles.icon} />
