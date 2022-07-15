@@ -1,0 +1,31 @@
+@use "../../styles/animations.scss" as *;
+@use "../../styles/media-queries.scss" as *;
+@use "../../styles/theme.scss" as *;
+@use "../../styles/utils.scss" as *;
+
+.item {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.1s;
+
+  &:hover {
+    background-color: #e84e0e;
+  }
+}
+
+.icon {
+  color: #ffffff;
+}
+
+.link {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
